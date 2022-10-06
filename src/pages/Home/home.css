@@ -3,6 +3,14 @@
     margin: 14px auto;
 }
 
+.loading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 14px;
+    color: #FFF;
+}
+
 .lista-filmes article{
     width: 100%;
     padding: 20px;
