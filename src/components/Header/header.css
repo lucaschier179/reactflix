@@ -4,14 +4,15 @@ header{
     justify-content: space-around;
     width: 100%;
     height: 60px;
-    background-color: #000000;
+    background-color: #FFFC00;
+    text-shadow: 1px 1px 0px rgb(0, 0, 0);
 }
 
 .logo{
     text-decoration: none;
     font-size: 30px;
     cursor: pointer;
-    color: #FFF;
+    color: rgba(0, 0, 0, .9);
     font-weight: bold;
 }
 
@@ -20,7 +21,8 @@ header{
     font-weight: bold;
     text-decoration: none;
     cursor: pointer;
-    background-color: #FFF;
+    background-color: rgba(0, 0, 0, .9);
     padding: 5px 14px;
-    color: #000000;
+    color: rgb(255, 252, 0);
+
 }
