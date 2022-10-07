@@ -1,6 +1,9 @@
 .lista-filmes{
     max-width: 800px;
     margin: 0 auto;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 .loading{
@@ -12,7 +15,8 @@
 }
 
 .lista-filmes article{
-    width: 100%;
+    margin: 0 auto;
+    width: 80%;
     padding: 20px;
     border-radius: 6px;
     background-color: #FFF;
@@ -27,7 +31,7 @@
 }
 
 .lista-filmes img{
-    width: 800px;
+    width: 700px;
     max-width: 100%;
     max-height: auto;
     object-fit: cover;
@@ -47,6 +51,7 @@
     color: #000;
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
+    width: auto;
 }
 
 .lista-filmes a:hover{
