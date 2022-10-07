@@ -35,6 +35,21 @@ function Filme(){
         
     }, [navigation, id])
 
+    function salvarFilme(){
+        const minhaLista = localStorage.getItem("@ReactFlix");
+        let filmesSalvos = JSON.parse(minhaLista) || [];
+
+        const hasFilme = filmesSalvos.some((filmesSalvo) => filmesSalvo.id === filme.id)
+        if(hasFilme){
+            alert("ESSE FILME JÁ FOI ADICIONADO EM MEUS FILMES");
+            return;
+        }
+
+        filmesSalvos.push(filme);
+        localStorage.setItem("@ReactFlix", JSON.stringify(filmesSalvos));
+        alert("FILME SALVO COM SUCESSO")
+    }
+
     if(loading){
         return(
             <div className='filme-info'>
@@ -52,10 +67,10 @@ function Filme(){
             <strong>Lançamento: {filme.release_date.split('-').reverse().join('/')}</strong>
             <strong>Avaliação: {filme.vote_average} / 10</strong>
             <div className='area-buttons'>
-                <button>Adicionar à Meus Filmes</button>
+                <button onClick={salvarFilme}>Adicionar à Meus Filmes</button>
                 <button>
                     <a target='blank' rel='external' href={`https://youtube.com/results?search_query=${filme.title} Trailer`}>
-                        Ver o trailer
+                        Trailer
                     </a>
                 </button>
             </div>
