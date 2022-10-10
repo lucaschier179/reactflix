@@ -1,17 +1,19 @@
 import { useEffect, useState } from 'react';
+import { useParams, useNavigate } from 'react-router-dom'
 import api from '../../services/api';
 import { Link } from 'react-router-dom';
-import './home.css'
+import './similar.css';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
-// URL DA API = movie/now_playing?api_key=710272209fd57c108bd36dbb4f6000c2&language=pt-BR
-
-function Home(){
+function Similar(){
+    const { id } = useParams();
+    const navigation = useNavigate();
     const [filmes, setFilmes] = useState([]);
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-        async function loadFilmes(){
-            const response = await api.get("movie/popular", {
+        async function similarFilmes(){
+            const response = await api.get(`/movie/${id}/similar`, {
                 params:{
                     api_key: "710272209fd57c108bd36dbb4f6000c2",
                     language: "pt-BR",
@@ -22,9 +24,8 @@ function Home(){
             setLoading(false)
         }
 
-        loadFilmes();
-
-    }, [])
+        similarFilmes();
+    }, [navigation, id])
 
     if(loading){
         return(
@@ -37,6 +38,7 @@ function Home(){
     return(
         <div className='container'>
             <div className='lista-filmes'>
+            <p>Recomendações:</p>
                 {filmes.map((filme) => {
                     return(
                         <article key={filme.id}>
@@ -51,4 +53,4 @@ function Home(){
     )
 }
 
-export default Home;
+export default Similar;

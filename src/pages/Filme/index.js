@@ -2,7 +2,8 @@ import { useEffect, useState} from 'react';
 import { useParams, useNavigate } from 'react-router-dom'
 import './filme-info.css';
 import api from '../../services/api';
-import { toast} from 'react-toastify';
+import { toast } from 'react-toastify';
+import Similar from '../../components/Similar';
 
 function Filme(){
     const { id } = useParams();
@@ -60,21 +61,25 @@ function Filme(){
     }
 
     return(
-        <div className='filme-info'>
-            <h1>{filme.title}</h1>
-            <img src={`https://image.tmdb.org/t/p/original/${filme.backdrop_path}`} alt={filme.title} />
-            <h3>Sinopse</h3>
-            <span>{filme.overview}</span>
-            <strong>Lançamento: {filme.release_date.split('-').reverse().join('/')}</strong>
-            <strong>Avaliação: {filme.vote_average} / 10</strong>
-            <div className='area-buttons'>
-                <button onClick={salvarFilme}>Adicionar à Meus Filmes</button>
-                <button>
-                    <a target='blank' rel='external' href={`https://youtube.com/results?search_query=${filme.title} Trailer`}>
-                        Trailer
-                    </a>
-                </button>
+        <div className='container'>
+            <div className='filme-info'>
+                <h1>{filme.title}</h1>
+                <img src={`https://image.tmdb.org/t/p/original/${filme.backdrop_path}`} alt={filme.title} />
+                <h3>Sinopse</h3>
+                <span>{filme.overview}</span>
+                <strong>Lançamento: {filme.release_date.split('-').reverse().join('/')}</strong>
+                <strong>Avaliação: {filme.vote_average} / 10</strong>
+                <div className='area-buttons'>
+                    <button onClick={salvarFilme}>Adicionar à Meus Filmes</button>
+                    <button>
+                        <a target='blank' rel='external' href={`https://youtube.com/results?search_query=${filme.title} Trailer`}>
+                            Trailer
+                        </a>
+                    </button>
+                </div>
+
             </div>
+            <Similar/>
         </div>
     )
 }
