@@ -35,4 +35,16 @@
 .meus-filmes div a{
     text-decoration: none;
     margin-right: 14px;
+    color: #FFFC00;
+}
+
+.meus-filmes button{
+    margin-right: -12px;
+    font-size: 18px;
+    border: 0;
+    outline: none;
+    padding: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #FFFC00;
 }
