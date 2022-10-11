@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Home from './pages/Home'
 import Filme from './pages/Filme'
 import Favoritos from './pages/Favoritos';
+import Top20 from './pages/Top20';
 
 import Erro from './pages/Erro';
 
@@ -14,8 +15,8 @@ function RoutesApp(){
             <Routes>
                 <Route path='/' element={ <Home/> }/>
                 <Route path='/filme/:id' element={ <Filme/> }/>
-                <Route path='/favoritos' element={<Favoritos/>} />
-
+                <Route path='/favoritos' element={ <Favoritos/> } />
+                <Route path='/top20filmes' element={ <Top20/> } />
                 <Route path='*' element={ <Erro/> } />
             </Routes>
         </BrowserRouter>

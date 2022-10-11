@@ -1,17 +1,17 @@
 import { useEffect, useState } from 'react';
 import api from '../../services/api';
 import { Link } from 'react-router-dom';
-import './home.css'
+import './top20.css'
 
 // URL DA API = movie/now_playing?api_key=710272209fd57c108bd36dbb4f6000c2&language=pt-BR
 
-function Home(){
+function Top20(){
     const [filmes, setFilmes] = useState([]);
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
         async function loadFilmes(){
-            const response = await api.get("movie/popular", {
+            const response = await api.get("movie/top_rated", {
                 params:{
                     api_key: "710272209fd57c108bd36dbb4f6000c2",
                     language: "pt-BR",
@@ -37,7 +37,7 @@ function Home(){
     return(
         <div className='container'>
             <div className='lista-filmes'>
-            <p>Filmes Mais Populares:</p>
+            <p>Top 20 Filmes:</p>
                 {filmes.map((filme) => {
                     return(
                         <article key={filme.id}>
@@ -52,4 +52,4 @@ function Home(){
     )
 }
 
-export default Home;
+export default Top20;

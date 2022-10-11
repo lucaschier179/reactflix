@@ -77,7 +77,6 @@ function Filme(){
                         </a>
                     </button>
                 </div>
-
             </div>
             <Similar/>
         </div>

@@ -5,7 +5,10 @@ function Header(){
     return(
         <header>
             <Link className='logo' to='/'>ReactFlix</Link>
+            <body>
             <Link className='favoritos' to='/favoritos'>Meus filmes</Link>
+            <Link className='top20Filmes' to='/top20filmes'>Top 20 Filmes</Link>
+            </body>
         </header>
     )
 }

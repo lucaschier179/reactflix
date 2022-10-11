@@ -1,7 +1,7 @@
 .lista-filmes{
-    max-width: 800px;
+    max-width: 450px;
     margin: 0 auto;
-    margin-top: 20px;
+    margin-top: 0px;
     display: flex;
     flex-direction: column;
 }
@@ -28,6 +28,7 @@
     text-align: center;
     font-size: 22px;
     display: block;
+    color: #000;
 }
 
 .lista-filmes img{
