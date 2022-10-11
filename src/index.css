@@ -16,3 +16,7 @@ body{
   align-items: center;
   flex-direction: column;
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
