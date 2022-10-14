@@ -47,6 +47,20 @@ body{
     @apply text-xl font-bold bg-yellow text-black rounded-md p-3 h-12 mt-4 w-60
   }
 
+/*    HOME    */
+  .lista-filmes{
+    @apply flex flex-col my-4
+  }
+  .loading{
+    @apply flex items-center justify-center mt-4 text-yellow bg-yellow
+  }
+  .lista-filmes article{
+    @apply w-80 rounded-md p-6 bg-white mb-6 m-auto
+  }
+
+
+
+
 /*    FAVORITOS    
   .meus-filmes{
     @apply flex flex-col mt-4 items-center text-yellow
