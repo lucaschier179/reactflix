@@ -52,12 +52,17 @@ body{
     @apply flex flex-col my-4
   }
   .loading{
-    @apply flex items-center justify-center mt-4 text-yellow bg-yellow
+    @apply flex items-center justify-center mt-4 text-yellow bg-yellow 
+  }
+  .lista-filmes p{
+    @apply text-yellow font-bold text-4xl  text-center my-2
   }
   .lista-filmes article{
-    @apply w-80 rounded-md p-6 bg-white mb-6 m-auto
+    @apply w-[90%] rounded-md p-4 bg-yellow mb-6 m-auto
   }
-
+  .lista-filmes img{
+    @apply border-4 border-black rounded-md 
+  }
 
 
 
