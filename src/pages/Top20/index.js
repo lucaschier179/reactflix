@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import api from '../../services/api';
 import { Link } from 'react-router-dom';
-import './top20.css'
 
 // URL DA API = movie/now_playing?api_key=710272209fd57c108bd36dbb4f6000c2&language=pt-BR
 
@@ -35,19 +34,17 @@ function Top20(){
     }
 
     return(
-        <div className='container'>
-            <div className='lista-filmes'>
-            <p>Top 20 Filmes:</p>
+        <div className='lista-filmes'>
+            <p className='titulo-top20'>Top 20 Filmes</p>
                 {filmes.map((filme) => {
                     return(
-                        <article key={filme.id}>
-                            <strong>{filme.title} - {filme.release_date.split('-').reverse().join('/')}</strong>
-                            <img src={`https://image.tmdb.org/t/p/original/${filme.poster_path}`} alt={filme.title}/>
-                            <Link to={`/filme/${filme.id}`}>Acessar</Link>
+                        <article className='container-filme' key={filme.id}>
+                            <strong className='titulo-filme'>{filme.title} - {filme.release_date.split('-').reverse().join('/')}</strong>
+                            <img className='poster-filme' src={`https://image.tmdb.org/t/p/original/${filme.poster_path}`} alt={filme.title}/>
+                            <Link className='botao-top20' to={`/filme/${filme.id}`}>Ver detalhes</Link>
                         </article>
                     )
                 })}
-            </div>
         </div>
     )
 }
