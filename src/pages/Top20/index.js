@@ -38,7 +38,7 @@ function Top20(){
             <p className='titulo-top20'>Top 20 Filmes</p>
                 {filmes.map((filme) => {
                     return(
-                        <article className='container-filme' key={filme.id}>
+                        <article className='container-top20' key={filme.id}>
                             <strong className='titulo-filme'>{filme.title} - {filme.release_date.split('-').reverse().join('/')}</strong>
                             <img className='poster-filme' src={`https://image.tmdb.org/t/p/original/${filme.poster_path}`} alt={filme.title}/>
                             <Link className='botao-top20' to={`/filme/${filme.id}`}>Ver detalhes</Link>

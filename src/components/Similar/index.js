@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom'
 import api from '../../services/api';
 import { Link } from 'react-router-dom';
-//import './similar.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 function Similar(){

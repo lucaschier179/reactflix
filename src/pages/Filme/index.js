@@ -1,6 +1,6 @@
 import { useEffect, useState} from 'react';
 import { useParams, useNavigate } from 'react-router-dom'
-import './filme-info.css';
+//import './filme-info.css';
 import api from '../../services/api';
 import { toast } from 'react-toastify';
 import Similar from '../../components/Similar';
@@ -31,10 +31,6 @@ function Filme(){
         }
         loadFilme();
 
-    return () => {
-        console.log("DESMONTADO")
-    }
-        
     }, [navigation, id])
 
     function salvarFilme(){
@@ -54,24 +50,24 @@ function Filme(){
 
     if(loading){
         return(
-            <div className='filme-info'>
+            <div className='loading'>
                 <h1>Carregando detalhes do filme...</h1>
             </div>
         )
     }
 
     return(
-        <div className='container'>
-            <div className='filme-info'>
-                <h1>{filme.title}</h1>
-                <img src={`https://image.tmdb.org/t/p/original/${filme.backdrop_path}`} alt={filme.title} />
-                <h3>Sinopse</h3>
-                <span>{filme.overview}</span>
-                <strong>Lançamento: {filme.release_date.split('-').reverse().join('/')}</strong>
-                <strong>Avaliação: {filme.vote_average} / 10</strong>
+        <div className='filme-info'>
+            <div className='container-filme-info'>
+                <h1 className='titulo-filme-info'>{filme.title}</h1>
+                <img className='poster-filme-info' src={`https://image.tmdb.org/t/p/original/${filme.backdrop_path}`} alt={filme.title} />
+                <strong className='lancamento'>Lançamento: {filme.release_date.split('-').reverse().join('/')}</strong>
+                <strong className='nota-filme'>Avaliação: {filme.vote_average} / 10</strong>
+                <h3><strong>Sinopse</strong></h3>
+                <span className='sinopse'>{filme.overview}</span>
                 <div className='area-buttons'>
-                    <button onClick={salvarFilme}>Adicionar à Meus Filmes</button>
-                    <button>
+                    <button className='botao-adicionar' onClick={salvarFilme}>Adicionar à Meus Filmes</button>
+                    <button className='botao-trailer'>
                         <a target='blank' rel='external' href={`https://youtube.com/results?search_query=${filme.title} Trailer`}>
                             Trailer
                         </a>

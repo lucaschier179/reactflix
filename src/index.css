@@ -49,7 +49,7 @@ body{
 
 /*    HOME    */
   .loading{
-    @apply flex items-center justify-center mt-4 text-yellow bg-yellow
+    @apply flex items-center justify-center mt-4 text-black bg-yellow
   }
   .lista-filmes{
     @apply flex-col h-full flex justify-center items-center
@@ -58,7 +58,7 @@ body{
     @apply text-yellow mb-3 mt-4 font-bold text-4xl text-center items-center
   }
   .container-filme{
-    @apply block w-10/12 rounded-md p-4 mb-4 bg-white
+    @apply block w-11/12 rounded-md p-4 mb-4 bg-white
   }
   .titulo-filme{
     @apply block text-black font-bold text-xl text-center items-center -mt-1 mb-1 
@@ -67,37 +67,70 @@ body{
     @apply rounded-t-md justify-center items-center flex h-full w-full object-cover
   }
   .botao-home{
-    @apply flex items-center justify-center text-xl font-bold  bg-yellow text-black rounded-t-none	rounded-b-md h-14 
+    @apply flex items-center justify-center text-xl font-bold bg-black text-yellow rounded-t-none	rounded-b-md h-14 
   }
   .botao-home:hover{
-    @apply bg-black text-yellow
+    @apply bg-yellow text-black 
   }
 
 /*    TOP 20 FILMES    */
-.loading{
-  @apply flex items-center justify-center mt-4 text-yellow bg-yellow
-}
-.lista-filmes{
-  @apply flex-col h-full flex justify-center items-center
-}
-.titulo-top20{
-  @apply text-yellow mb-3 mt-4 font-bold text-4xl text-center items-center
-}
-.container-filme{
-  @apply block w-10/12 rounded-md p-4 mb-4
-}
-.titulo-filme{
-  @apply block text-black font-bold text-xl text-center items-center -mt-1 mb-1 
-}
-.poster-filme{
-  @apply rounded-t-md justify-center items-center flex h-full w-full object-cover
-}
-.botao-top20{
-  @apply flex items-center justify-center text-xl font-bold bg-yellow text-black rounded-t-none	rounded-b-md h-14 
-}
-.botao-top20:hover{
-  @apply bg-black text-yellow
-}
+  .loading{
+    @apply flex items-center justify-center mt-4 text-black bg-yellow
+  }
+  .lista-filmes{
+    @apply flex-col h-full flex justify-center items-center
+  }
+  .titulo-top20{
+    @apply text-yellow mb-3 mt-4 font-bold text-4xl text-center items-center
+  }
+  .container-top20{
+    @apply block w-11/12 rounded-md p-4 mb-4 bg-white
+  }
+  .titulo-filme{
+    @apply block text-black font-bold text-xl text-center items-center -mt-1 mb-1 
+  }
+  .poster-filme{
+    @apply rounded-t-md justify-center items-center flex h-full w-full object-cover
+  }
+  .botao-top20{
+    @apply flex items-center justify-center text-xl font-bold bg-black text-yellow  rounded-t-none	rounded-b-md h-14 
+  }
+  .botao-top20:hover{
+    @apply bg-yellow text-black
+  }
+
+/*    FILME-INFO    */
+  .loading{
+    @apply flex items-center justify-center mt-4 text-yellow bg-white
+  }
+  .filme-info{
+    @apply flex-col h-full flex justify-center items-center
+  }
+  .container-filme-info{
+    @apply block w-11/12 rounded-md p-4 my-3 bg-white
+  }
+  .titulo-filme-info{
+    @apply block text-black font-bold text-xl text-center items-center -mt-1 mb-1 
+  }
+  .poster-filme-info{
+    @apply  rounded-md justify-center items-center flex h-full w-full object-cover mb-2
+  }
+  .sinopse{
+    @apply text-justify flex mb-2
+  }
+  .lancamento{
+    @apply flex my-2
+  }
+  .nota-filme{
+    @apply flex mb-2 -mt-2
+  }
+  .botao-adicionar{
+    @apply font-bold bg-black text-yellow rounded-md p-2 w-full h-10 my-1
+  }
+  .botao-trailer{
+    @apply font-bold bg-black text-yellow rounded-md p-2 w-full h-10
+  }
+
 
 
 /*    FAVORITOS    
