@@ -1,6 +1,5 @@
 import { useEffect, useState} from 'react';
 import { useParams, useNavigate } from 'react-router-dom'
-//import './filme-info.css';
 import api from '../../services/api';
 import { toast } from 'react-toastify';
 import Similar from '../../components/Similar';
