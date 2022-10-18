@@ -24,10 +24,9 @@ body{
 @tailwind utilities;
 
 @layer components{
-
 /*    COMPONENTE HEADER   */
   .cabecalho{
-    @apply w-full h-20 bg-yellow flex items-center justify-center
+    @apply w-full h-16 bg-yellow flex items-center justify-center
   }
   .logo-header{
     @apply text-4xl font-black mx-6 md:mx-12
@@ -84,10 +83,17 @@ body{
   .botao:hover{
     @apply bg-yellow text-black 
   }
-/*    FAVORITOS    
+/*    FAVORITOS    */
   .meus-filmes{
-    @apply flex flex-col mt-4 items-center text-yellow
+    @apply flex-col h-full flex justify-center items-center
   }
+  .container-meus-filmes{
+    @apply flex  w-11/12 rounded-md p-4 my-2 bg-white justify-between items-center
+  }
+  .botao-excluir{
+    @apply font-bold bg-black text-yellow rounded-md ml-1 h-10 w-16
+  }
+/*  
   .meus-filmes ul{
     @apply w-screen 
   }
