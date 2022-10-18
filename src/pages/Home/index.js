@@ -35,13 +35,13 @@ function Home(){
 
     return(
         <div className='lista-filmes'>
-            <p className='titulo-home'>Filmes Mais Populares</p>
+            <p className='titulo-pagina'>Filmes Mais Populares</p>
                 {filmes.map((filme) => {
                     return(
                         <article className='container-filme' key={filme.id}>
                             <strong className='titulo-filme'>{filme.title} - {filme.release_date.split('-').reverse().join('/')}</strong>
                             <img className='poster-filme' src={`https://image.tmdb.org/t/p/original/${filme.poster_path}`} alt={filme.title}/>
-                            <Link className='botao-home' to={`/filme/${filme.id}`}>Ver detalhes</Link>
+                            <Link className='botao-ver-detalhes' to={`/filme/${filme.id}`}>Ver detalhes</Link>
                         </article>
                     )
                 })}

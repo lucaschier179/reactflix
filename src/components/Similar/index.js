@@ -19,7 +19,7 @@ function Similar(){
                     page: 1,
                 }
             })
-            setFilmes(response.data.results.slice(0,10))
+            setFilmes(response.data.results.slice(0,20))
             setLoading(false)
         }
 
@@ -36,13 +36,13 @@ function Similar(){
 
     return(
             <div className='lista-filmes'>
-            <p className='titulo-recomendacao'>Recomendações</p>
+            <p className='titulo-pagina'>Recomendações</p>
                 {filmes.map((filme) => {
                     return(
-                        <article  className='container-filme-recomendacao' key={filme.id}>
-                            <strong className='titulo-filme-recomendacao'>{filme.title} - {filme.release_date.split('-').reverse().join('/')}</strong>
-                            <img className='poster-filme-recomendacao' src={`https://image.tmdb.org/t/p/original/${filme.poster_path}`} alt={filme.title}/>
-                            <Link className='botao-recomendacao' to={`/filme/${filme.id}`}>Acessar</Link>
+                        <article  className='container-filme' key={filme.id}>
+                            <strong className='titulo-filme'>{filme.title} - {filme.release_date.split('-').reverse().join('/')}</strong>
+                            <img className='poster-filme' src={`https://image.tmdb.org/t/p/original/${filme.poster_path}`} alt={filme.title}/>
+                            <Link className='botao-ver-detalhes' to={`/filme/${filme.id}`}>Ver detalhes</Link>
                         </article>
                     )
                 })}

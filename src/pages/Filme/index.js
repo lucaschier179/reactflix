@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom'
 import api from '../../services/api';
 import { toast } from 'react-toastify';
 import Similar from '../../components/Similar';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 function Filme(){
     const { id } = useParams();
@@ -56,17 +57,17 @@ function Filme(){
     }
 
     return(
-        <div className='filme-info'>
-            <div className='container-filme-info'>
-                <h1 className='titulo-filme-info'>{filme.title}</h1>
+        <div className='lista-filmes'>
+            <div className='container-filme'>
+                <h1 className='titulo-filme'>{filme.title}</h1>
                 <img className='poster-filme-info' src={`https://image.tmdb.org/t/p/original/${filme.backdrop_path}`} alt={filme.title} />
-                <strong className='lancamento'>Lançamento: {filme.release_date.split('-').reverse().join('/')}</strong>
-                <strong className='nota-filme'>Avaliação: {filme.vote_average} / 10</strong>
+                <strong className='informacao-filme'>Lançamento: {filme.release_date.split('-').reverse().join('/')}</strong>
+                <strong className='informacao-filme'>Avaliação: {filme.vote_average} / 10</strong>
                 <h3><strong>Sinopse</strong></h3>
                 <span className='sinopse'>{filme.overview}</span>
                 <div className='area-buttons'>
-                    <button className='botao-adicionar' onClick={salvarFilme}>Adicionar à Meus Filmes</button>
-                    <button className='botao-trailer'>
+                    <button className='botao' onClick={salvarFilme}>Adicionar à Meus Filmes</button>
+                    <button className='botao'>
                         <a target='blank' rel='external' href={`https://youtube.com/results?search_query=${filme.title} Trailer`}>
                             Trailer
                         </a>
