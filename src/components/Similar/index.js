@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom'
 import api from '../../services/api';
 import { Link } from 'react-router-dom';
-import { Swiper, SwiperSlide } from 'swiper/react';
 
 function Similar(){
     const { id } = useParams();
@@ -22,7 +21,6 @@ function Similar(){
             setFilmes(response.data.results.slice(0,20))
             setLoading(false)
         }
-
         similarFilmes();
     }, [navigation, id])
 

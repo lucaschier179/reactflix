@@ -5,7 +5,7 @@ function Header(){
         <header className='cabecalho'>
             <Link className='logo-header' to='/'>Re@ctFlix</Link>
             <Link className='botao-header' to='/favoritos'>Meus filmes</Link>
-            <Link className='botao-header' to='/top20filmes'>Top 20 Filmes</Link>
+            <Link className='botao-header' to='/top20filmes'>Top20 Filmes</Link>
         </header>
     )
 }

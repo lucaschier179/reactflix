@@ -1,29 +1,13 @@
-
-*{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-body{
-  font-family: 'Hind', sans-serif;
-  background-color:#191919;
-}
-
-.app{
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer components{
+  body{
+    font-family: 'Hind', sans-serif;
+    background-color:#191919;
+  }
+
 /*    COMPONENTE HEADER   */
   .cabecalho{
     @apply w-full h-16 bg-yellow flex items-center justify-center
@@ -35,14 +19,7 @@ body{
     @apply font-bold bg-black text-yellow rounded-md p-2 h-10 mr-2
   }
 
-/*    ERRO 404    */
-  .erro-titulo{
-    @apply h-screen flex flex-col items-center justify-center text-center text-lg text-yellow -mt-16
-  }
-  .botao-erro{
-    @apply text-xl font-bold bg-yellow text-black rounded-md p-3 h-12 mt-2
-  }
-/*    HOME    */
+/*    PADRÃO    */
   .loading{
     @apply flex items-center justify-center mt-4 text-black bg-yellow
   }
@@ -67,6 +44,26 @@ body{
   .botao-ver-detalhes:hover{
     @apply bg-yellow text-black 
   }
+
+/*    ERRO 404    */  
+  .erro-titulo{
+    @apply h-screen flex flex-col items-center justify-center text-center text-lg text-yellow -mt-16
+  }  
+  .botao-erro{
+    @apply text-xl font-bold bg-yellow text-black rounded-md p-3 h-12 mt-2
+  }  
+
+/*    FAVORITOS    */
+  .meus-filmes{
+    @apply flex-col h-full flex justify-center items-center
+  }
+  .container-meus-filmes{
+    @apply flex  w-11/12 rounded-md p-4 my-2 bg-white justify-between items-center
+  }
+  .botao-excluir{
+    @apply font-bold bg-black text-yellow rounded-md ml-1 h-10 w-16
+  }
+
 /*    FILME-INFO    */
   .poster-filme-info{
     @apply  rounded-md justify-center items-center flex h-full w-full object-cover mb-2
@@ -83,34 +80,4 @@ body{
   .botao:hover{
     @apply bg-yellow text-black 
   }
-/*    FAVORITOS    */
-  .meus-filmes{
-    @apply flex-col h-full flex justify-center items-center
-  }
-  .container-meus-filmes{
-    @apply flex  w-11/12 rounded-md p-4 my-2 bg-white justify-between items-center
-  }
-  .botao-excluir{
-    @apply font-bold bg-black text-yellow rounded-md ml-1 h-10 w-16
-  }
-/*  
-  .meus-filmes ul{
-    @apply w-screen 
-  }
-  .meus-filmes ul li{
-    @apply justify-start items-center p-2	
-  }
-  .meus-filmes div{
-    @apply flex justify-end items-center
-  }
-  .meus-filmes div a{
-    @apply mr-4
-  }
-  .titulo{
-    @apply mb-4 text-4xl
-  }
-  .botao-excluir{
-    @apply font-bold bg-yellow text-black rounded-md p-2 h-10 mr-2
-  }
-*/
 }

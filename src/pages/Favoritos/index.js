@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-//import './favoritos.css'
 import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
@@ -27,11 +26,11 @@ function Favoritos(){
                 {filmes.map((item) => {
                     return(
                         <strong className='container-meus-filmes' key={item.id}>
-                            <span >{item.title}</span>
-                            <div>
-                                <Link to={`/filme/${item.id}`}>Ver detalhes</Link>
-                                <button className='botao-excluir' onClick={() => excluirFilme(item.id)}>Excluir</button>
-                            </div>
+                        <span>{item.title}</span>
+                        <div>
+                            <Link to={`/filme/${item.id}`}>Ver detalhes</Link>
+                            <button className='botao-excluir' onClick={() => excluirFilme(item.id)}>Excluir</button>
+                        </div>
                         </strong>
                     )
                 })}
