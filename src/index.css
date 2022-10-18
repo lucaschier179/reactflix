@@ -10,13 +10,13 @@
 
 /*    COMPONENTE HEADER   */
   .cabecalho{
-    @apply w-full h-16 bg-yellow flex items-center justify-center
+    @apply w-full h-14 bg-yellow flex items-center justify-center
   }
   .logo-header{
-    @apply text-4xl font-black mx-6 md:mx-12
+    @apply text-4xl font-black mx-6
   }
   .botao-header{
-    @apply font-bold bg-black text-yellow rounded-md p-2 h-10 mr-2
+    @apply font-bold bg-black text-yellow rounded-md p-2 h-10 mr-2 lg:text-2xl 
   }
 
 /*    PADRÃO    */
@@ -30,16 +30,16 @@
     @apply text-yellow my-3 font-bold text-4xl text-center items-center
   }
   .container-filme{
-    @apply block w-11/12 rounded-md p-4 my-2 bg-white
+    @apply block w-11/12 rounded-md p-4 my-2 bg-white lg:w-3/12
   }
   .titulo-filme{
-    @apply block text-black font-bold text-xl text-center items-center -mt-1 mb-1 
+    @apply block text-black font-bold text-xl text-center items-center -mt-1 mb-1 md:text-2xl
   }
   .poster-filme{
     @apply rounded-t-md justify-center items-center flex h-full w-full object-cover
   }
   .botao-ver-detalhes{
-    @apply flex items-center justify-center text-xl font-bold bg-black text-yellow rounded-t-none	rounded-b-md h-14 
+    @apply flex items-center justify-center text-xl font-bold bg-black text-yellow rounded-t-none	rounded-b-md h-14 lg:text-2xl
   }
   .botao-ver-detalhes:hover{
     @apply bg-yellow text-black 
@@ -58,7 +58,7 @@
     @apply flex-col h-full flex justify-center items-center
   }
   .container-meus-filmes{
-    @apply flex  w-11/12 rounded-md p-4 my-2 bg-white justify-between items-center
+    @apply flex w-11/12 rounded-md p-4 my-2 bg-white justify-between items-center lg:w-6/12
   }
   .botao-excluir{
     @apply font-bold bg-black text-yellow rounded-md ml-1 h-10 w-16
